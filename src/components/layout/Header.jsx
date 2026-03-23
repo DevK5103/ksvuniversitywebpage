@@ -165,9 +165,9 @@ export default function Header() {
         {/* Logo */}
         <Link to="/" className="flex items-center group relative z-10" onClick={() => setActiveMegaMenu(null)}>
           <img 
-            src="/ksvfullname.png" 
-            alt="Kadi Sarva Vishwavidyalaya Logo" 
-            className="h-12 md:h-16 w-auto object-contain group-hover:scale-[1.02] transition-transform"
+            src="/logos/ksv-logo-horizontal.png" 
+            alt="KSV University" 
+            className="h-10 md:h-12 w-auto object-contain"
           />
         </Link>
 

@@ -36,7 +36,7 @@ export default function SdgGrid() {
         {/* Top Logo Banner */}
         <div className="flex justify-center mb-12">
           <img 
-            src="/sdg.png" 
+            src="/icons/sdg/sdg.png" 
             alt="Sustainable Development Goals" 
             className="h-24 md:h-32 object-contain"
           />
