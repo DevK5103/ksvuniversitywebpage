@@ -52,21 +52,21 @@ export default function ContactInfo() {
             className="bg-ksv-light border-t-4 border-ksv-secondary rounded-b-radius-lg p-8 shadow-card hover:shadow-hover transition-shadow"
           >
             <h3 className="text-2xl font-heading font-bold text-ksv-dark mb-6 flex items-center gap-3">
-              <span className="bg-ksv-secondary/20 p-2 rounded-full text-ksv-dark"><Globe size={24} /></span>
-              Global Alumni Office (USA)
+              <span className="bg-ksv-secondary/20 p-2 rounded-full text-ksv-dark"><MapPin size={24} /></span>
+              Kadi Campus
             </h3>
             <ul className="space-y-6">
               <li className="flex gap-4">
                 <MapPin className="text-ksv-primary shrink-0 mt-1" size={20} />
-                <p className="font-body text-ksv-dark/80">909 Rose Avenue,<br />5th Floor, RockVille,<br />Maryland, MD - 20852, USA</p>
+                <p className="font-body text-ksv-dark/80">B/h Railway Station,<br />Kadi - 382715,<br />District Mehsana, North Gujarat, India</p>
               </li>
               <li className="flex gap-4">
                 <Phone className="text-ksv-primary shrink-0 mt-1" size={20} />
-                <p className="font-body text-ksv-dark/80">+1 (703) 585-4448</p>
+                <p className="font-body text-ksv-dark/80">+91 - 079 - 2324 4690</p>
               </li>
               <li className="flex gap-4">
                 <Clock className="text-ksv-primary shrink-0 mt-1" size={20} />
-                <p className="font-body text-ksv-dark/80">Mon-Fri: 9:00 AM - 5:00 PM EST</p>
+                <p className="font-body text-ksv-dark/80">Mon-Fri: 9:00 AM - 5:00 PM IST</p>
               </li>
             </ul>
           </motion.div>

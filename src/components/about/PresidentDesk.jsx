@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Quote } from 'lucide-react';
-import AlertBanner from '../layout/AlertBanner';
 
 export default function PresidentDesk() {
   return (
@@ -12,12 +11,7 @@ export default function PresidentDesk() {
           <div className="w-24 h-1 bg-ksv-secondary mx-auto rounded-full"></div>
         </div>
 
-        <AlertBanner 
-          type="info" 
-          message="Notice: The full text of the President's message is pending final approval from the university administration." 
-        />
-
-        <div className="bg-ksv-white rounded-radius-lg shadow-card border border-ksv-border/40 overflow-hidden mt-6">
+        <div className="bg-ksv-white rounded-radius-lg shadow-card border border-ksv-border/40 overflow-hidden">
           <div className="flex flex-col md:flex-row">
             
             {/* Image Column */}

@@ -25,6 +25,7 @@ const CampusTourPage = React.lazy(() => import('./pages/CampusTourPage'));
 const NewsEventsPage = React.lazy(() => import('./pages/NewsEventsPage'));
 const ContactPage = React.lazy(() => import('./pages/ContactPage'));
 const RecruitmentPage = React.lazy(() => import('./pages/RecruitmentPage'));
+const SearchPage = React.lazy(() => import('./pages/SearchPage'));
 const NotFound = React.lazy(() => import('./pages/NotFound'));
 
 function AnimatedRoutes() {
@@ -55,6 +56,7 @@ function AnimatedRoutes() {
           <Route path="/news-events" element={<PageTransition><NewsEventsPage /></PageTransition>} />
           <Route path="/contact" element={<PageTransition><ContactPage /></PageTransition>} />
           <Route path="/recruitment" element={<PageTransition><RecruitmentPage /></PageTransition>} />
+          <Route path="/search" element={<PageTransition><SearchPage /></PageTransition>} />
           <Route path="*" element={<PageTransition><NotFound /></PageTransition>} />
         </Routes>
       </React.Suspense>

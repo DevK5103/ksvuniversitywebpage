@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import SdgHero from '../components/sustainability/SdgHero';
-import SdgGoals from '../components/sustainability/SdgGoals';
+import SdgGrid from '../components/sustainability/SdgGrid';
 
 export default function SustainabilityPage() {
   const { hash } = useLocation();
@@ -21,8 +20,7 @@ export default function SustainabilityPage() {
 
   return (
     <div className="bg-ksv-white min-h-screen">
-      <SdgHero />
-      <SdgGoals />
+      <SdgGrid />
     </div>
   );
 }

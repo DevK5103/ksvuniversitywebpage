@@ -91,7 +91,7 @@ export default function AboutSection() {
             </div>
             
             {/* Trust Motto floating badge */}
-            <div className="absolute -bottom-6 -left-6 bg-ksv-white p-6 rounded-xl shadow-xl border border-ksv-border/50 max-w-[200px] z-20">
+            <div className="absolute -top-8 -left-8 bg-ksv-white p-6 rounded-xl shadow-xl border border-ksv-border/50 max-w-[200px] z-20">
               <div className="flex items-center gap-3 mb-2">
                 <div className="w-8 h-8 rounded-full bg-ksv-green/10 flex items-center justify-center">
                   <Leaf className="text-ksv-green" size={16} />
