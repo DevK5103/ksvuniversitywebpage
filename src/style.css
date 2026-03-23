@@ -21,6 +21,18 @@
   --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Custom Webkit Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--ksv-light); }
+::-webkit-scrollbar-thumb { background: var(--ksv-primary); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--ksv-secondary); }
+
+/* WCAG 2.1 AA Accessibility Focus Ring */
+*:focus-visible {
+  outline: 2px solid var(--ksv-secondary) !important;
+  outline-offset: 2px !important;
+}
+
 @theme {
   /* KSV Design System Tokens */
   --color-ksv-primary: var(--ksv-primary);

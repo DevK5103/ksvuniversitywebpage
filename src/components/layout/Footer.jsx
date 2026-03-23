@@ -11,8 +11,8 @@ export default function Footer() {
           {/* Col 1: Brand & About */}
           <div className="space-y-6">
             <div className="flex items-center gap-4">
-              <div className="w-16 h-16 bg-ksv-white rounded-full flex items-center justify-center shrink-0">
-                <span className="text-ksv-primary font-display font-bold text-2xl">KSV</span>
+              <div className="h-16 w-16 bg-ksv-white rounded-full flex items-center justify-center shrink-0 overflow-hidden shadow-sm p-1">
+                <img src="/ksv.svg" alt="KSV Logo" className="w-14 h-14 object-contain" />
               </div>
               <div>
                 <h3 className="font-display font-bold text-lg leading-tight">Kadi Sarva<br />Vishwavidyalaya</h3>
