@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 const routeSeoMap = {
-  '/': { title: 'Kadi Sarva Vishwavidyalaya | Academic Excellence', desc: 'Welcome to KSV University, the leading hub for education, research, and holistic development in Gujarat.' },
+  '/': { title: 'Kadi Sarva Vishwavidyalaya | Kar Bhala Hoga Bhala', desc: 'Welcome to KSV University, the leading hub for education, research, and holistic development in Gujarat.' },
   '/about': { title: 'About Us | KSV', desc: 'Learn about KSV University, our history, SVKM Trust, and the visionary leadership guiding our mission.' },
   '/academics': { title: 'Academics & Programmes | KSV', desc: 'Explore UG, PG, and PhD programmes offered across all KSV institutes with our comprehensive academic syllabus.' },
   '/campuses': { title: 'Our Campuses | KSV', desc: 'Discover KSV institutes spread across the vibrant Kadi and Gandhinagar campuses.' },
