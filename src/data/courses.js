@@ -1,0 +1,17 @@
+export const coursesData = [
+  { id: 1, name: 'B.E. Computer Engineering', program: 'undergraduate', school: 'Engineering & Technology', institute: 'LDRP', desc: '4-year full-time undergraduate engineering programme focusing on software and hardware systems.' },
+  { id: 2, name: 'B.Sc. Nursing', program: 'undergraduate', school: 'Nursing', institute: 'CMPATEL', desc: 'Comprehensive nursing programme preparing competent healthcare professionals.' },
+  { id: 3, name: 'B.Pharm', program: 'undergraduate', school: 'Pharmacy', institute: 'KBIPER', desc: 'Bachelor of Pharmacy focusing on pharmaceutical sciences and drug development.' },
+  { id: 4, name: 'MBA', program: 'postgraduate', school: 'Management', institute: 'SKPIMCS', desc: 'Master of Business Administration developing future business leaders and entrepreneurs.' },
+  { id: 5, name: 'MCA', program: 'postgraduate', school: 'Computer Science & Applications', institute: 'BPCCS', desc: 'Master of Computer Applications for advanced software engineering and IT skills.' },
+  { id: 6, name: 'PhD (Computer Science)', program: 'phd', school: 'Computer Science & Applications', institute: 'KSV', desc: 'Doctoral research programme exploring advanced computer science disciplines.' },
+  { id: 7, name: 'Certificate in Computing', program: 'certificate', school: 'Computer Science & Applications', institute: 'SMMPISR', desc: 'Short term vocational certificate course in fundamental computing and IT concepts.' },
+  { id: 8, name: 'M.E. Mechanical', program: 'postgraduate', school: 'Engineering & Technology', institute: 'LDRP', desc: 'Postgraduate engineering specializing in advanced mechanical design and thermal engineering.' },
+  { id: 9, name: 'BBA', program: 'undergraduate', school: 'Management', institute: 'NPCCSM', desc: 'Bachelor of Business Administration providing foundational knowledge in management.' },
+  { id: 10, name: 'BCA', program: 'undergraduate', school: 'Computer Science & Applications', institute: 'NICSM', desc: 'Bachelor of Computer Applications preparing students for careers in software development.' },
+  { id: 11, name: 'B.Com', program: 'undergraduate', school: 'Commerce', institute: 'AAPCC', desc: 'Bachelor of Commerce focusing on finance, accounting and economic principles.' },
+  { id: 12, name: 'B.Ed', program: 'undergraduate', school: 'Education', institute: 'RHP', desc: 'Bachelor of Education preparing future teachers with modern pedagogical skills.' },
+  { id: 13, name: 'M.Pharm', program: 'postgraduate', school: 'Pharmacy', institute: 'KBIPER', desc: 'Master of Pharmacy for specialized research in pharmaceutics, pharmacology, and quality assurance.' },
+  { id: 14, name: 'MSW', program: 'postgraduate', school: 'Social Work', institute: 'KSV', desc: 'Master of Social Work to prepare professionals for community service and social development.' },
+  { id: 15, name: 'PhD (Management)', program: 'phd', school: 'Management', institute: 'KSV', desc: 'Doctoral research focusing on advanced business administration and strategic management topics.' },
+];

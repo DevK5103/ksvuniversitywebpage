@@ -36,10 +36,11 @@ export default function QuotesCarousel() {
   }, []);
 
   return (
-    <div className="py-24 bg-ksv-accent">
-      <div className="max-w-[800px] mx-auto px-6 text-center">
-        <div className="mb-8">
-          <span className="font-display font-bold text-6xl text-ksv-secondary/40 leading-none">“</span>
+    <div className="py-24 bg-ksv-primary relative overflow-hidden text-white">
+      <div className="absolute inset-0 bg-[url('/images/pattern.svg')] opacity-5"></div>
+      <div className="max-w-[1000px] mx-auto px-6 text-center relative z-10">
+        <div className="mb-4">
+          <span className="font-display font-bold text-8xl text-ksv-secondary/30 leading-none block transform translate-y-6">“</span>
         </div>
         
         <div className="relative h-[250px] md:h-[200px]">
@@ -52,15 +53,15 @@ export default function QuotesCarousel() {
               transition={{ duration: 0.5, ease: "easeInOut" }}
               className="absolute inset-0 flex flex-col items-center justify-center"
             >
-              <h3 className="font-display italic text-2xl md:text-3xl text-ksv-primary mb-8 leading-relaxed">
+              <h3 className="font-display italic text-2xl md:text-4xl text-white mb-8 leading-relaxed max-w-4xl mx-auto shadow-sm">
                 {quotes[current].text}
               </h3>
               
               <div className="flex flex-col items-center">
-                <span className="font-heading font-bold text-ksv-dark text-lg uppercase tracking-wider">
+                <span className="font-heading font-bold text-ksv-secondary text-lg uppercase tracking-wider">
                   — {quotes[current].author}
                 </span>
-                <span className="font-body text-ksv-dark/60 text-sm mt-1">
+                <span className="font-body text-white/50 text-sm mt-1">
                   {quotes[current].date} | {quotes[current].context}
                 </span>
               </div>
@@ -73,8 +74,8 @@ export default function QuotesCarousel() {
             <button
               key={idx}
               onClick={() => setCurrent(idx)}
-              className={`w-2 h-2 rounded-full transition-all ${
-                current === idx ? 'bg-ksv-primary w-6' : 'bg-ksv-primary/30 hover:bg-ksv-primary/50'
+              className={`w-3 h-3 rounded-full transition-all ${
+                current === idx ? 'bg-ksv-secondary w-8' : 'bg-white/20 hover:bg-white/40'
               }`}
               aria-label={`Show quote ${idx + 1}`}
             />

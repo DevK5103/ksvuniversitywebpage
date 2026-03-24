@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 export default function ExamHero() {
   return (
-    <div className="relative pt-32 pb-20 w-full bg-ksv-dark overflow-hidden min-h-[400px] flex items-center">
+    <div className="relative pt-40 md:pt-48 pb-20 w-full bg-ksv-dark overflow-hidden min-h-[400px] flex items-center">
       <div className="absolute inset-0 opacity-20 mix-blend-overlay" style={{backgroundImage: 'url("https://images.unsplash.com/photo-1577415124269-b9140d10b714?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80")', backgroundSize: 'cover', backgroundPosition: 'center'}}></div>
       <div className="absolute inset-0 bg-gradient-to-t from-ksv-dark via-ksv-dark/80 to-transparent"></div>
 

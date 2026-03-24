@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ChevronRight, Home, Users, BookOpen, GraduationCap } from 'lucide-react';
+import { ChevronRight, Home, GraduationCap, BookOpen, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-export default function ResearchHero() {
+export default function ResearchProjectsHero() {
   return (
     <div className="relative pt-40 md:pt-48 pb-20 w-full bg-ksv-primary overflow-hidden min-h-[500px] flex items-center">
       {/* Background Graphic */}
@@ -33,7 +33,11 @@ export default function ResearchHero() {
             <span>Home</span>
           </Link>
           <ChevronRight size={16} className="text-ksv-white/50" />
-          <span className="text-ksv-secondary font-medium">Research Portal</span>
+          <Link to="/research" className="hover:text-ksv-secondary transition-colors">
+            Research
+          </Link>
+          <ChevronRight size={16} className="text-ksv-white/50" />
+          <span className="text-ksv-secondary font-medium">Research Projects</span>
         </motion.div>
 
         <div className="flex flex-col lg:flex-row gap-12 items-center">
@@ -44,7 +48,7 @@ export default function ResearchHero() {
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="text-4xl md:text-6xl font-display font-bold text-ksv-white mb-6 leading-tight"
             >
-              Pioneering <span className="text-ksv-secondary">Research & Innovation</span>
+              Research at <span className="text-ksv-secondary">KSV</span>
             </motion.h1>
             <motion.p 
               initial={{ opacity: 0, y: 30 }}
@@ -52,7 +56,7 @@ export default function ResearchHero() {
               transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
               className="text-lg text-ksv-white/80 font-body leading-relaxed mb-8 max-w-xl"
             >
-              Kadi Sarva Vishwavidyalaya is a leading center for multidisciplinary research, driven by a commitment to societal impact, technological advancement, and academic excellence.
+              Explore our ongoing and completed multidisciplinary research projects, publications, and expansive research ecosystem.
             </motion.p>
           </div>
 
@@ -65,26 +69,26 @@ export default function ResearchHero() {
             >
               <div className="bg-ksv-white/10 backdrop-blur-md border border-ksv-white/20 p-6 rounded-radius-md text-center">
                 <div className="bg-ksv-secondary/20 w-12 h-12 rounded-full flex items-center justify-center text-ksv-secondary mx-auto mb-4">
+                  <GraduationCap size={24} />
+                </div>
+                <h3 className="text-3xl font-display font-bold text-ksv-white mb-1">17</h3>
+                <p className="text-sm font-heading font-medium text-ksv-white/70 uppercase tracking-wider">PhD Disciplines</p>
+              </div>
+              
+              <div className="bg-ksv-white/10 backdrop-blur-md border border-ksv-white/20 p-6 rounded-radius-md text-center">
+                <div className="bg-ksv-secondary/20 w-12 h-12 rounded-full flex items-center justify-center text-ksv-secondary mx-auto mb-4">
                   <BookOpen size={24} />
                 </div>
                 <h3 className="text-3xl font-display font-bold text-ksv-white mb-1">10</h3>
                 <p className="text-sm font-heading font-medium text-ksv-white/70 uppercase tracking-wider">Faculties</p>
               </div>
-              
+
               <div className="bg-ksv-white/10 backdrop-blur-md border border-ksv-white/20 p-6 rounded-radius-md text-center">
                 <div className="bg-ksv-secondary/20 w-12 h-12 rounded-full flex items-center justify-center text-ksv-secondary mx-auto mb-4">
                   <Users size={24} />
                 </div>
-                <h3 className="text-3xl font-display font-bold text-ksv-white mb-1">18,000+</h3>
-                <p className="text-sm font-heading font-medium text-ksv-white/70 uppercase tracking-wider">Students</p>
-              </div>
-
-              <div className="bg-ksv-white/10 backdrop-blur-md border border-ksv-white/20 p-6 rounded-radius-md text-center">
-                <div className="bg-ksv-secondary/20 w-12 h-12 rounded-full flex items-center justify-center text-ksv-secondary mx-auto mb-4">
-                  <GraduationCap size={24} />
-                </div>
-                <h3 className="text-3xl font-display font-bold text-ksv-white mb-1">17</h3>
-                <p className="text-sm font-heading font-medium text-ksv-white/70 uppercase tracking-wider">PhD Disciplines</p>
+                <h3 className="text-3xl font-display font-bold text-ksv-white mb-1">18k+</h3>
+                <p className="text-sm font-heading font-medium text-ksv-white/70 uppercase tracking-wider">Research Students</p>
               </div>
             </motion.div>
           </div>

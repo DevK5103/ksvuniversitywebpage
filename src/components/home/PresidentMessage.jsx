@@ -17,9 +17,9 @@ export default function PresidentMessage() {
           {/* Photo Side */}
           <div className="md:w-2/5 relative h-80 md:h-auto">
             <img 
-              src="https://images.unsplash.com/photo-1558222218-b7b54eede3f3?auto=format&fit=crop&q=80&w=800" 
+              src="/images/people/shri-vallabhai-m-patel.jpeg" 
               alt="Shri Vallabhbhai M. Patel" 
-              className="absolute inset-0 w-full h-full object-cover object-top filter grayscale pt-4"
+              className="absolute inset-0 w-full h-full object-cover object-top pt-4"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-ksv-primary/90 via-transparent to-transparent"></div>
             <div className="absolute bottom-6 left-6 right-6">

@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Search, Type, X } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
+import { useNavbarState } from '../../hooks/useNavbarState';
 
 export default function TopBar() {
+  const { isScrolled } = useNavbarState();
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const navigate = useNavigate();
@@ -59,14 +61,18 @@ export default function TopBar() {
     { name: 'Journals', path: '/journals' },
     { name: 'Conferences', path: '/journals' },
     { name: 'Campus Tour', path: '/campus-tour' },
-    { name: 'Funded Projects', path: '/research' },
-    { name: 'Research Projects', path: '/research' },
+    { name: 'Funded Projects', path: '/research/funded-projects' },
+    { name: 'Research Projects', path: '/research/projects' },
     { name: 'Recruitment', path: '/recruitment' }
   ];
 
   return (
     <>
-      <div className="bg-ksv-primary text-ksv-white font-heading text-xs py-2 hidden lg:block">
+      <div 
+        className={`fixed top-0 left-0 right-0 z-[1001] transition-transform duration-300 hidden lg:block ${
+          isScrolled ? '-translate-y-full' : 'translate-y-0'
+        } bg-ksv-primary text-ksv-white font-heading text-xs py-2`}
+      >
         <div className="max-w-[1280px] mx-auto px-6 flex justify-between items-center">
           {/* Left: Quick Links */}
           <div className="flex items-center gap-4 flex-wrap">

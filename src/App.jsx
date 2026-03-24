@@ -15,10 +15,15 @@ import ChatbotWidget from './components/chatbot/ChatbotWidget';
 const HomePage = React.lazy(() => import('./pages/HomePage'));
 const AboutPage = React.lazy(() => import('./pages/AboutPage'));
 const AcademicsPage = React.lazy(() => import('./pages/AcademicsPage'));
+const CoursesPage = React.lazy(() => import('./pages/CoursesPage'));
+const PlacementsPage = React.lazy(() => import('./pages/PlacementsPage'));
+const AlumniPage = React.lazy(() => import('./pages/AlumniPage'));
 const CampusesPage = React.lazy(() => import('./pages/CampusesPage'));
 const SisterConcernsPage = React.lazy(() => import('./pages/SisterConcernsPage'));
 const CellsCentersPage = React.lazy(() => import('./pages/CellsCentersPage'));
 const ResearchPage = React.lazy(() => import('./pages/ResearchPage'));
+const FundedProjectsPage = React.lazy(() => import('./pages/FundedProjectsPage'));
+const ResearchProjectsPage = React.lazy(() => import('./pages/ResearchProjectsPage'));
 const ExaminationPage = React.lazy(() => import('./pages/ExaminationPage'));
 const SustainabilityPage = React.lazy(() => import('./pages/SustainabilityPage'));
 const JournalsPage = React.lazy(() => import('./pages/JournalsPage'));
@@ -46,10 +51,15 @@ function AnimatedRoutes() {
           <Route path="/" element={<PageTransition><HomePage /></PageTransition>} />
           <Route path="/about" element={<PageTransition><AboutPage /></PageTransition>} />
           <Route path="/academics" element={<PageTransition><AcademicsPage /></PageTransition>} />
+          <Route path="/academics/courses" element={<PageTransition><CoursesPage /></PageTransition>} />
+          <Route path="/placements" element={<PageTransition><PlacementsPage /></PageTransition>} />
+          <Route path="/alumni" element={<PageTransition><AlumniPage /></PageTransition>} />
           <Route path="/campuses" element={<PageTransition><CampusesPage /></PageTransition>} />
           <Route path="/sister-concerns" element={<PageTransition><SisterConcernsPage /></PageTransition>} />
           <Route path="/cells-centers" element={<PageTransition><CellsCentersPage /></PageTransition>} />
           <Route path="/research" element={<PageTransition><ResearchPage /></PageTransition>} />
+          <Route path="/research/funded-projects" element={<PageTransition><FundedProjectsPage /></PageTransition>} />
+          <Route path="/research/projects" element={<PageTransition><ResearchProjectsPage /></PageTransition>} />
           <Route path="/examination" element={<PageTransition><ExaminationPage /></PageTransition>} />
           <Route path="/sustainability" element={<PageTransition><SustainabilityPage /></PageTransition>} />
           <Route path="/journals" element={<PageTransition><JournalsPage /></PageTransition>} />

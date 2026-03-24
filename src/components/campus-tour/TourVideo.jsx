@@ -35,12 +35,17 @@ export default function TourVideo() {
           transition={{ duration: 0.6 }}
           className="relative max-w-4xl mx-auto aspect-video rounded-radius-lg overflow-hidden shadow-2xl border-4 border-ksv-white/10 group cursor-pointer"
         >
-          {/* We use a placeholder image and a play button overlay to simulate a lazy-loaded YouTube Iframe */}
-          <div className="absolute inset-0 bg-ksv-dark/40 group-hover:bg-ksv-dark/20 transition-all z-10 flex items-center justify-center">
+          {/* We use an anchor tag to link directly to the 360 degree Google Maps Street View of KSV campus */}
+          <a 
+            href="https://www.google.com/maps/@23.2397173,72.6389291,3a,75y,332h,3.44t/data=!3m8!1e1!3m6!1sCIHM0ogKEICAgIDy9pOKDA!2e10!3e11!6shttps:%2F%2Flh3.googleusercontent.com%2Fgpms-cs-s%2FAFfmt2YjnZyiyeqJR5uN7sRtLPnRam-oYW70bWm5hWTySCV5PgaxivMLDjEEzICKpr-TG7BghjUE0jQGEaopWbX4XOxW2Shda-ZPY0pAMHyIoaYAiJwGkKT5tyxasBcZs7ro_ShhNEI%3Dw900-h600-k-no-pi86.56340483666577-ya332.0031733927979-ro0-fo100!7i4096!8i2048?entry=ttu&g_ep=EgoyMDI2MDMxOC4xIKXMDSoASAFQAw%3D%3D"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="absolute inset-0 bg-ksv-dark/40 group-hover:bg-ksv-dark/20 transition-all z-10 flex items-center justify-center cursor-pointer"
+          >
             <div className="bg-ksv-secondary text-ksv-dark w-20 h-20 rounded-full flex items-center justify-center pl-2 shadow-[0_0_30px_rgba(252,163,17,0.5)] transform group-hover:scale-110 transition-transform">
               <Play size={40} fill="currentColor" />
             </div>
-          </div>
+          </a>
           <img 
             src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
             alt="Campus Tour Thumbnail" 

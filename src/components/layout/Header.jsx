@@ -2,58 +2,59 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown, Search, Type } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useNavbarState } from '../../hooks/useNavbarState';
+import ApplyNowButton from './ApplyNowButton';
 
 const megaMenuData = {
-  Programs: {
-    path: '/academics',
+  "Academics": {
+    path: "/academics",
     sections: [
       {
-        title: 'Under Graduate',
+        title: "Programmes",
         links: [
-          { name: 'B.E (Engineering)', path: '/academics#ug' },
-          { name: 'B.Sc / B.PT / B.Sc Nursing', path: '/academics#ug' },
-          { name: 'B.Pharm', path: '/academics#ug' },
-          { name: 'BBA / BCA / B.Ed / B.Com', path: '/academics#ug' },
+          { name: "Undergraduate", path: "/academics/courses?program=undergraduate" },
+          { name: "Postgraduate", path: "/academics/courses?program=postgraduate" },
+          { name: "PhD / Research", path: "/academics/courses?program=phd" }
         ]
       },
       {
-        title: 'Academic Resources',
+        title: "Explore",
         links: [
-          { name: 'Syllabus: UG', path: '/academics#syllabus' },
-          { name: 'Syllabus: PG', path: '/academics#syllabus' },
-          { name: 'Certificate Programs', path: '/academics#certificate' },
-          { name: 'Centers & Cells', path: '/cells-centers' },
+          { name: "Browse Courses", path: "/academics/courses" },
+          { name: "Our Campuses", path: "/campuses" },
+          { name: "Sister Institutions", path: "/sister-concerns" }
         ]
       }
     ]
   },
-  Campuses: {
-    path: '/campuses',
+  "Research": {
+    path: "/research",
     sections: [
       {
-        title: 'Gandhinagar Campus',
+        title: "Initiatives",
         links: [
-          { name: 'LDRP Institute of Technology', path: '/campuses#gandhinagar' },
-          { name: 'Chanchalben Pharamcy College', path: '/campuses#gandhinagar' },
-          { name: 'View All 14 Institutes →', path: '/campuses#gandhinagar' },
+          { name: "Research Overview", path: "/research" },
+          { name: "Funded Projects", path: "/research/funded-projects" },
+          { name: "Research Projects", path: "/research/projects" }
         ]
       },
       {
-        title: 'Kadi Campus',
+        title: "Resources",
         links: [
-          { name: 'Pramukh Swami Science College', path: '/campuses#kadi' },
-          { name: 'B.P. College of Business Admin', path: '/campuses#kadi' },
-          { name: 'View All 10 Institutes →', path: '/campuses#kadi' },
+          { name: "Journals", path: "/journals" },
+          { name: "Institutional Repository", path: "http://160.160.17.54/library" }
         ]
       }
     ]
   },
-  'Sister Concerns': {
-    path: '/sister-concerns',
+  "Campus": {
+    path: "/campus-tour",
     sections: [
       {
-        title: 'Established Institutions',
+        title: "Discover",
         links: [
+          { name: "Virtual Tour", path: "/campus-tour" },
+          { name: "Cells & Centers", path: "/cells-centers" },
           { name: 'VPMP Polytechnic', path: '/sister-concerns' },
           { name: 'Uma Arts and Nathiba Mahila Arts College', path: '/sister-concerns' },
           { name: 'Pramukh Swami Science and H.D. Patel Arts College', path: '/sister-concerns' },
@@ -73,8 +74,11 @@ const megaMenuData = {
         ]
       },
       {
-        title: 'Student Life',
+        title: "Student Life",
         links: [
+          { name: "News & Events", path: "/news-events" },
+          { name: "Alumni Network", path: "/alumni" },
+          { name: "Placements", path: "/placements" },
           { name: 'Sports Council', path: '/cells-centers' },
           { name: 'LAKSH & Social Responsibility', path: '/cells-centers' },
           { name: 'Vijaya Performing Arts', path: '/cells-centers' },
@@ -86,7 +90,7 @@ const megaMenuData = {
 };
 
 export default function Header() {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const { isTransparent, isDarkBgTop } = useNavbarState();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeMegaMenu, setActiveMegaMenu] = useState(null);
   const [activeMobileAccordion, setActiveMobileAccordion] = useState(null);
@@ -141,13 +145,7 @@ export default function Header() {
       ).slice(0, 6)
     : [];
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 40);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  // Note: scroll listener has been moved to useNavbarState hook and removed from here.
 
   // Close mega menu on route change
   useEffect(() => {
@@ -155,29 +153,46 @@ export default function Header() {
     setMobileMenuOpen(false);
   }, [location.pathname]);
 
+  const isCurrentlyTransparent = isTransparent && !activeMegaMenu;
+  const textColor = isCurrentlyTransparent 
+    ? (isDarkBgTop ? 'text-white hover:text-white/80' : 'text-ksv-dark hover:text-ksv-secondary') 
+    : 'text-ksv-dark hover:text-ksv-secondary';
+  // The user wants the logo background completely transparent at all times in the navbar
+  // and they want the true colors.
+  const logoContainerBg = '';
+  const activeColor = isCurrentlyTransparent 
+    ? (isDarkBgTop ? 'text-ksv-secondary' : 'text-ksv-primary') 
+    : 'text-ksv-primary';
+
   return (
     <header 
-      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        isScrolled || activeMegaMenu ? 'bg-ksv-white/95 backdrop-blur shadow-md py-2' : 'bg-ksv-white py-4'
+      className={`fixed w-full z-50 transition-all duration-300 ${
+        isCurrentlyTransparent 
+          ? `bg-transparent top-0 lg:top-[36px] py-4 ${isDarkBgTop ? 'text-white' : 'text-ksv-dark'}` 
+          : 'bg-ksv-white text-ksv-dark shadow-md border-b-[3px] border-ksv-secondary top-0 py-2'
       }`}
       onMouseLeave={() => setActiveMegaMenu(null)}
     >
       <div className="max-w-[1280px] mx-auto px-6 flex justify-between items-center relative">
         {/* Logo */}
-        <Link to="/" className="flex items-center group relative z-10" onClick={() => setActiveMegaMenu(null)}>
+        <Link 
+          to="/" 
+          className={`flex items-center group relative z-10 transition-colors duration-300 ${logoContainerBg}`} 
+          onClick={() => setActiveMegaMenu(null)}
+        >
           <img 
             src="/logos/ksv-logo-horizontal.png" 
             alt="KSV University" 
-            className="h-10 md:h-12 w-auto object-contain"
+            className={`h-14 md:h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105`}
           />
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-8 relative z-10">
-          <Link to="/" className={`font-heading text-sm font-semibold transition-colors ${location.pathname === '/' ? 'text-ksv-primary' : 'text-ksv-dark hover:text-ksv-secondary'}`}>
+          <Link to="/" className={`font-heading text-sm font-semibold transition-colors ${location.pathname === '/' ? activeColor : textColor}`}>
             Home
           </Link>
-          <Link to="/about" className={`font-heading text-sm font-semibold transition-colors ${location.pathname.startsWith('/about') ? 'text-ksv-primary' : 'text-ksv-dark hover:text-ksv-secondary'}`}>
+          <Link to="/about" className={`font-heading text-sm font-semibold transition-colors ${location.pathname.startsWith('/about') ? activeColor : textColor}`}>
             About Us
           </Link>
 
@@ -194,7 +209,7 @@ export default function Header() {
                 <Link 
                   to={data.path}
                   className={`flex items-center gap-1 font-heading text-sm font-semibold transition-colors ${
-                    isActiveRoute || isMenuOpen ? 'text-ksv-primary' : 'text-ksv-dark hover:text-ksv-secondary'
+                    isActiveRoute || isMenuOpen ? activeColor : textColor
                   }`}
                 >
                   {key}
@@ -208,11 +223,14 @@ export default function Header() {
               </div>
             );
           })}
+          
+          {/* Apply Now CTA */}
+          <ApplyNowButton isTransparent={isCurrentlyTransparent} />
         </nav>
 
         {/* Mobile Menu Toggle */}
         <button 
-          className="lg:hidden text-ksv-primary hover:text-ksv-secondary transition-colors relative z-50"
+          className={`lg:hidden transition-colors relative z-50 ${isCurrentlyTransparent ? (isDarkBgTop ? 'text-white' : 'text-ksv-primary') : 'text-ksv-primary hover:text-ksv-secondary'}`}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -279,7 +297,7 @@ export default function Header() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="lg:hidden fixed inset-0 z-40 bg-ksv-white pt-24 px-6 h-screen overflow-y-auto w-full"
+            className="lg:hidden fixed inset-0 z-40 bg-ksv-white pt-24 px-6 h-screen overflow-y-auto w-full text-ksv-dark"
           >
             <nav className="flex flex-col gap-2 pb-20">
               {/* Added Accessibility & Search for Mobile */}

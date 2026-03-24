@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 export default function SdgHero() {
   return (
-    <div className="relative pt-32 pb-24 w-full bg-[#1e4a3b] overflow-hidden min-h-[500px] flex items-center">
+    <div className="relative pt-40 md:pt-48 pb-24 w-full bg-[#1e4a3b] overflow-hidden min-h-[500px] flex items-center">
       {/* Background Leaves/Nature SVG Abstract */}
       <div className="absolute inset-0 opacity-10">
         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">

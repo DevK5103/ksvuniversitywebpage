@@ -11,7 +11,7 @@ const slides = [
     cta: "Explore Admissions",
     link: "/academics/admission",
     gradient: "from-ksv-primary/90 to-black/80",
-    image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&q=80&w=2070"
+    image: "/images/hero/ksv-university-building.jpg.jpeg"
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const slides = [
     cta: "Take Virtual Tour",
     link: "/campus-tour",
     gradient: "from-blue-900/90 to-black/80",
-    image: "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&q=80&w=2086"
+    image: "/images/hero/Ksvdrone.jpg.jpeg"
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const slides = [
     cta: "About the Trust",
     link: "/about#svkm-trust",
     gradient: "from-slate-900/90 to-black/80",
-    image: "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&q=80&w=2070"
+    image: "/images/hero/ksv-university-building.jpg.jpeg"
   },
   {
     id: 4,
@@ -38,7 +38,7 @@ const slides = [
     cta: "View Campuses",
     link: "/campuses",
     gradient: "from-emerald-900/90 to-black/80",
-    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&q=80&w=2070"
+    image: "/images/hero/Ksvdrone.jpg.jpeg"
   },
   {
     id: 5,
@@ -47,7 +47,7 @@ const slides = [
     cta: "Browse Academics",
     link: "/academics",
     gradient: "from-purple-900/90 to-black/80",
-    image: "https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&q=80&w=1974"
+    image: "/images/hero/ksv-university-building.jpg.jpeg"
   },
   {
     id: 6,
@@ -56,7 +56,7 @@ const slides = [
     cta: "Discover Facilities",
     link: "/campus-tour",
     gradient: "from-ksv-dark/90 to-black/80",
-    image: "https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&q=80&w=2069"
+    image: "/images/hero/Ksvdrone.jpg.jpeg"
   },
   {
     id: 7,
@@ -65,7 +65,7 @@ const slides = [
     cta: "Our Research",
     link: "/research",
     gradient: "from-ksv-secondary/80 to-black/90",
-    image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=2070"
+    image: "/images/hero/ksv-university-building.jpg.jpeg"
   }
 ];
 
