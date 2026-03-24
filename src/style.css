@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+:root {
+  /* Brand Colors */
+  --ksv-primary: #1A3A6B;
+  --ksv-secondary: #C8973A;
+  --ksv-accent: #E8F0FE;
+  --ksv-green: #2E7D32;
+  --ksv-dark: #0D1B2A;
+  --ksv-light: #F8F9FC;
+  --ksv-white: #FFFFFF;
+  --ksv-border: #DDE3EE;
+
+  /* Component Tokens */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+  --shadow-card: 0 2px 16px rgba(0,0,0,0.08);
+  --shadow-hover: 0 8px 32px rgba(26,58,107,0.15);
+  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Custom Webkit Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--ksv-light); }
+::-webkit-scrollbar-thumb { background: var(--ksv-primary); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--ksv-secondary); }
+
+/* WCAG 2.1 AA Accessibility Focus Ring */
+*:focus-visible {
+  outline: 2px solid var(--ksv-secondary) !important;
+  outline-offset: 2px !important;
+}
+
+@theme {
+  /* KSV Design System Tokens */
+  --color-ksv-primary: var(--ksv-primary);
+  --color-ksv-secondary: var(--ksv-secondary);
+  --color-ksv-accent: var(--ksv-accent);
+  --color-ksv-green: var(--ksv-green);
+  --color-ksv-dark: var(--ksv-dark);
+  --color-ksv-light: var(--ksv-light);
+  --color-ksv-white: var(--ksv-white);
+  --color-ksv-border: var(--ksv-border);
+
+  --font-display: "Playfair Display", serif;
+  --font-heading: "Poppins", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-data: "Space Grotesk", sans-serif;
+  --font-motto: "Noto Serif Devanagari", serif;
+
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-pill: var(--radius-pill);
+
+  --shadow-hover: var(--shadow-hover);
+}
+
+@theme default {
+  --animate-ticker: ticker 30s linear infinite;
+
+  @keyframes ticker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+}
+
+/* Utilities not supported natively by Tailwind v4 theme block can be added globally */
+@utility pause {
+  animation-play-state: paused;
+}
+
+body {
+  margin: 0;
+  background: var(--ksv-light);
+  color: var(--ksv-dark);
+  font-family: var(--font-body);
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  vertical-align: middle;
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, #003366 0%, #001e40 100%);
+}
+
+.glass-nav {
+  background: rgba(248, 249, 250, 0.8);
+  backdrop-filter: blur(20px);
+}
+
+.text-shadow-sm {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #003366;
+}
