@@ -238,7 +238,7 @@ export default function SdgGrid() {
   const sdgFullForm = 'Sustainable Development Goals';
 
   return (
-    <section className="py-12 bg-[#F8F9FA] min-h-screen">
+    <section className="pt-28 pb-12 lg:pt-40 bg-[#F8F9FA] min-h-screen">
       <div className="max-w-[1200px] mx-auto px-6">
         
         {/* Breadcrumb Header */}

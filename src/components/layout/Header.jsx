@@ -154,6 +154,7 @@ export default function Header() {
   }, [location.pathname]);
 
   const isCurrentlyTransparent = isTransparent && !activeMegaMenu;
+  const isTopState = isTransparent;
   const textColor = isCurrentlyTransparent 
     ? (isDarkBgTop ? 'text-white hover:text-white/80' : 'text-ksv-dark hover:text-ksv-secondary') 
     : 'text-ksv-dark hover:text-ksv-secondary';
@@ -167,8 +168,8 @@ export default function Header() {
   return (
     <header 
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isCurrentlyTransparent 
-          ? `bg-transparent top-0 lg:top-[36px] py-4 ${isDarkBgTop ? 'text-white' : 'text-ksv-dark'}` 
+        isTopState
+          ? `${isCurrentlyTransparent ? 'bg-transparent' : 'bg-ksv-white shadow-md border-b-[3px] border-ksv-secondary'} top-0 lg:top-[36px] py-4 ${isDarkBgTop ? 'text-white' : 'text-ksv-dark'}`
           : 'bg-ksv-white text-ksv-dark shadow-md border-b-[3px] border-ksv-secondary top-0 py-2'
       }`}
       onMouseLeave={() => setActiveMegaMenu(null)}
