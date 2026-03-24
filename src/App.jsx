@@ -9,6 +9,7 @@ import Footer from './components/layout/Footer';
 import PageTransition from './components/layout/PageTransition';
 
 import PageLoader from './components/layout/PageLoader';
+import ChatbotWidget from './components/chatbot/ChatbotWidget';
 
 // Lazy Loaded Pages
 const HomePage = React.lazy(() => import('./pages/HomePage'));
@@ -82,6 +83,7 @@ function App() {
         </main>
 
         <Footer />
+        <ChatbotWidget />
       </div>
     </Router>
   );
