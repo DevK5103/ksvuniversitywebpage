@@ -18,7 +18,16 @@ const cells = [
   { id: 'laksh', title: 'LAKSH — University Fitness Cell', icon: BicepsFlexed, link: '/cells/laksh' },
   { id: 'sarva-netrutva', title: 'Sarva Netrutva', icon: Activity, link: '/cells/sarva-netrutva' },
   { id: 'social', title: 'Social Responsibility Activities', icon: Heart, link: '/cells/social-responsibility' },
-  { id: 'vijaya', title: 'Vijaya Performing Arts', icon: Music, link: '/cells/vijaya-arts' }
+  { id: 'vijaya', title: 'Vijaya Performing Arts', icon: Music, link: '/cells/vijaya-arts' },
+  // IEEE Student Branch
+  {
+    id: 'ieee',
+    title: 'IEEE Student Branch (KSV)',
+    icon: null, // Will use custom logo below
+    link: 'https://ieee.ksv.sb.in',
+    external: true,
+    description: 'The IEEE Student Branch at KSV fosters innovation, technical skills, and professional growth. Join us for workshops, seminars, and global networking in engineering, technology, and science.'
+  }
 ];
 
 export default function CellsGrid() {
@@ -36,7 +45,6 @@ export default function CellsGrid() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {cells.map((cell, idx) => {
-            const Icon = cell.icon;
             const CardContent = (
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
@@ -45,12 +53,23 @@ export default function CellsGrid() {
                 transition={{ delay: idx * 0.05 }}
                 className="bg-ksv-white rounded-radius-md border border-ksv-border p-6 h-full flex flex-col items-center text-center shadow-card hover:shadow-hover hover:border-ksv-secondary transition-all group"
               >
-                <div className="w-16 h-16 rounded-full bg-ksv-light flex items-center justify-center mb-6 text-ksv-primary group-hover:bg-ksv-secondary group-hover:text-ksv-dark transition-colors border border-ksv-border/40 group-hover:border-transparent">
-                  <Icon size={28} />
+                {/* Custom logo for IEEE, icon for others */}
+                <div className="w-16 h-16 rounded-full bg-ksv-light flex items-center justify-center mb-6 text-ksv-primary group-hover:bg-ksv-secondary group-hover:text-ksv-dark transition-colors border border-ksv-border/40 group-hover:border-transparent overflow-hidden">
+                  {cell.id === 'ieee' ? (
+                    <img src="/images/ieee/Blue.png" alt="IEEE Logo" className="w-12 h-12 object-contain" />
+                  ) : (
+                    cell.icon && React.createElement(cell.icon, { size: 28 })
+                  )}
                 </div>
                 <h3 className="font-heading font-bold text-lg text-ksv-dark leading-tight group-hover:text-ksv-primary transition-colors">
                   {cell.title}
                 </h3>
+                {/* Description for IEEE only */}
+                {cell.id === 'ieee' && (
+                  <p className="text-sm text-ksv-dark/70 mt-2 mb-2">
+                    {cell.description}
+                  </p>
+                )}
                 <div className="mt-auto pt-6 w-full">
                   <span className="text-sm font-semibold text-ksv-secondary group-hover:text-ksv-primary transition-colors flex items-center justify-center gap-1">
                     {cell.external ? 'Visit Website ↗' : 'Learn More →'}

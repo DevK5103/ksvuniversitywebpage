@@ -61,7 +61,7 @@ const megaMenuData = {
       }
     ]
   },
-  'Cells & Center': {
+  'Cells & Centres': {
     path: '/cells-centers',
     sections: [
       {
@@ -78,6 +78,7 @@ const megaMenuData = {
           { name: 'Sports Council', path: '/cells-centers' },
           { name: 'LAKSH & Social Responsibility', path: '/cells-centers' },
           { name: 'Vijaya Performing Arts', path: '/cells-centers' },
+          { name: 'IEEE Student Branch', path: '/cells-centers#ieee' },
         ]
       }
     ]
