@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import NewsHero from '../components/news/NewsHero';
 import NewsGrid from '../components/news/NewsGrid';
+import PubNewsSection from '../components/news/PubNewsSection';
 
 export default function NewsEventsPage() {
   const { hash } = useLocation();
@@ -18,6 +19,7 @@ export default function NewsEventsPage() {
     <div className="bg-ksv-white min-h-screen">
       <NewsHero />
       <NewsGrid />
+      {/* <PubNewsSection /> */}
     </div>
   );
 }
