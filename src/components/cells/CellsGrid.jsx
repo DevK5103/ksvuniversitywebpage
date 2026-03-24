@@ -24,7 +24,7 @@ const cells = [
     id: 'ieee',
     title: 'IEEE Student Branch (KSV)',
     icon: null, // Will use custom logo below
-    link: 'https://ieee.ksv.sb.in',
+    link: 'https://ieee-ksv-sb.mmpsrpc.in/',
     external: true,
     description: 'The IEEE Student Branch at KSV fosters innovation, technical skills, and professional growth. Join us for workshops, seminars, and global networking in engineering, technology, and science.'
   }
