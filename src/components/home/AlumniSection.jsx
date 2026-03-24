@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import { Globe, Users, Briefcase, ExternalLink, ArrowRight } from 'lucide-react';
 
 const alumniStories = [
-  { name: 'Aditi Sharma', program: 'B.E. Computer Eng, Batch 2019', role: 'Software Engineer @ Google', quote: '"KSV shaped both my technical skills and my character. The faculty helped me land my dream job."' },
-  { name: 'Vikram Joshi', program: 'MBA, Batch 2016', role: 'Marketing Head @ Reliance', quote: '"The management program provided a strong foundation and incredible industry exposure."' },
-  { name: 'Neha Patel', program: 'B.Pharm, Batch 2020', role: 'Researcher @ Sun Pharma', quote: '"State-of-the-art labs and hands-on training prepared me for advanced research."' }
+  { name: 'Sumit Khamar', program: 'B.E. Computer Eng, Batch 2018', role: 'Senior Software Engineer @ Accenture', image: '/images/people/sumit_alumni.png', quote: '"KSV shaped both my technical skills and my character. The faculty helped me land my dream job."' },
+  { name: 'Hirva Patel', program: 'MBA, Batch 2019', role: 'Business Analyst @ Goldmansachs', image: '/images/people/hirva_alumni.jpeg', quote: '"The management program provided a strong foundation and incredible industry exposure."' },
+  { name: 'Shubhamkumar chandravanshi', program: 'B.Pharm, Batch 2020', role: 'Quality Control Lead @ Deloitte', image: '/images/people/shubham_alumni.jpeg', quote: '"State-of-the-art labs and hands-on training prepared me for advanced research."' }
 ];
 
 export default function AlumniSection() {
@@ -60,7 +60,7 @@ export default function AlumniSection() {
                 <div key={idx} className="bg-white rounded-radius-lg p-6 shadow-card min-w-[300px] lg:min-w-0 snap-center border-l-4 border-transparent hover:border-ksv-secondary transition-all duration-300">
                   <div className="flex items-center gap-4 mb-4">
                     <div className="w-16 h-16 rounded-full bg-ksv-border/40 flex-shrink-0 overflow-hidden">
-                      <img src={`/images/people/alumni-${(idx % 3) + 4}.jpg`} alt={story.name} className="w-full h-full object-cover" onError={(e) => { e.target.style.display = 'none'; }} />
+                      <img src={story.image} alt={story.name} className="w-full h-full object-cover" onError={(e) => { e.target.style.display = 'none'; }} />
                     </div>
                     <div>
                       <h4 className="font-heading font-bold text-lg text-ksv-primary">{story.name}</h4>

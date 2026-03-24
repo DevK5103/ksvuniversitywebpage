@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 import { ExternalLink, Globe, Users, Briefcase } from 'lucide-react';
 
 const alumniStories = [
-  { name: 'Aditi Sharma', program: 'B.E. Computer Eng, Batch 2019', role: 'Software Engineer @ Google', quote: '"KSV shaped both my technical skills and my character. The faculty helped me land my dream job."' },
-  { name: 'Vikram Joshi', program: 'MBA, Batch 2016', role: 'Marketing Head @ Reliance', quote: '"The management program provided a strong foundation and incredible industry exposure."' },
-  { name: 'Neha Patel', program: 'B.Pharm, Batch 2020', role: 'Researcher @ Sun Pharma', quote: '"State-of-the-art labs and hands-on training prepared me for advanced research."' },
-  { name: 'Sameer Khan', program: 'MCA, Batch 2018', role: 'Tech Lead @ TCS', quote: '"The practical approach to learning at KSV gave me a competitive edge in my career."' },
-  { name: 'Pooja Desai', program: 'B.Sc. Nursing, Batch 2021', role: 'Registered Nurse @ Apollo Hospitals', quote: '"Clinical exposure and mentorship from experienced faculty were the highlights of my journey."' },
-  { name: 'Rahul Mehta', program: 'B.Com, Batch 2017', role: 'Financial Analyst @ HDFC Bank', quote: '"The commerce program at KSV is top-notch, blending theory with real-world applications."' }
+  { name: 'Sumit Khamar', program: 'B.E. Computer Eng, Batch 2018', role: 'Senior Software Engineer @ Accenture', image: '/images/people/sumit_alumni.png', quote: '"KSV shaped both my technical skills and my character. The faculty helped me land my dream job."' },
+  { name: 'Hirva Patel', program: 'MBA, Batch 2019', role: 'Business Analyst @ Goldmansachs', image: '/images/people/hirva_alumni.jpeg', quote: '"The management program provided a strong foundation and incredible industry exposure."' },
+  { name: 'Shubhamkumar chandravanshi', program: 'B.Pharm, Batch 2020', role: 'Quality Control Lead @ Deloitte', image: '/images/people/shubham_alumni.jpeg', quote: '"State-of-the-art labs and hands-on training prepared me for advanced research."' },
+  { name: 'Sameer Khan', program: 'MCA, Batch 2018', role: 'Tech Lead @ TCS', image: '/images/people/alumni-4.jpg', quote: '"The practical approach to learning at KSV gave me a competitive edge in my career."' },
+  { name: 'Pooja Desai', program: 'B.Sc. Nursing, Batch 2021', role: 'Registered Nurse @ Apollo Hospitals', image: '/images/people/alumni-5.jpg', quote: '"Clinical exposure and mentorship from experienced faculty were the highlights of my journey."' },
+  { name: 'Rahul Mehta', program: 'B.Com, Batch 2017', role: 'Financial Analyst @ HDFC Bank', image: '/images/people/alumni-6.jpg', quote: '"The commerce program at KSV is top-notch, blending theory with real-world applications."' }
 ];
 
 export default function AlumniPage() {
@@ -92,7 +92,7 @@ export default function AlumniPage() {
               <div key={idx} className="bg-white rounded-radius-lg p-8 shadow-card border-l-4 border-ksv-secondary hover:-translate-y-2 hover:shadow-hover transition-all duration-300 flex flex-col">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-16 h-16 rounded-full bg-ksv-border/40 flex-shrink-0 overflow-hidden">
-                    <img src={`/images/people/alumni-${(idx % 6) + 1}.jpg`} alt={story.name} className="w-full h-full object-cover" onError={(e) => { e.target.style.display = 'none'; }} />
+                    <img src={story.image} alt={story.name} className="w-full h-full object-cover" onError={(e) => { e.target.style.display = 'none'; }} />
                   </div>
                   <div>
                     <h4 className="font-heading font-bold text-lg text-ksv-primary leading-tight">{story.name}</h4>
